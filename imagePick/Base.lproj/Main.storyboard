@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imagePick" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iCw-uP-MxH">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gak-Tw-S0Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="290"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wcb-Zl-e5u">
+                                        <rect key="frame" x="0.0" y="290" width="560" height="290"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWx-OU-Qxx">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="290"/>
+                                                <state key="normal" title="Alum"/>
+                                                <connections>
+                                                    <action selector="pickFromAlum" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ky-Dv-P9i"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPG-m4-T72">
+                                                <rect key="frame" x="280" y="0.0" width="280" height="290"/>
+                                                <state key="normal" title="Camera"/>
+                                                <connections>
+                                                    <action selector="pickFromCamera" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Kr-CK-3ie"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <variation key="heightClass=compact" axis="vertical"/>
+                                    </stackView>
+                                </subviews>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iCw-uP-MxH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JBl-4E-EaF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iCw-uP-MxH" secondAttribute="bottom" id="WNj-ee-wkt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iCw-uP-MxH" secondAttribute="trailing" id="WSV-4C-k3C"/>
+                            <constraint firstItem="iCw-uP-MxH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iBP-wC-NV3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alumButton" destination="zWx-OU-Qxx" id="XUc-gZ-LJL"/>
+                        <outlet property="cameraButton" destination="nPG-m4-T72" id="7Hy-zo-cSg"/>
+                        <outlet property="image" destination="gak-Tw-S0Q" id="0wL-Yd-aeq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
